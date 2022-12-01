@@ -32,8 +32,12 @@ function onFormReloaded() {
     const parcedFormFields = JSON.parse(savedFormFields);
 
     if (parcedFormFields) {
+        if (parcedFormFields.email) {
         refs.input.value = parcedFormFields.email;
+        }
+        if (parcedFormFields.message) {
         refs.textarea.value = parcedFormFields.message;
+        }
     }
  }
 
